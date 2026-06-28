@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Eric (Christian) Luevano — Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  @page { size: A4; margin: 0; }
+
+  :root {
+    --ink: #1a1f29;
+    --muted: #515b6b;
+    --dim: #7a8597;
+    --sidebar: #0e1219;
+    --sidebar-2: #161c27;
+    --accent: #c79a4b;
+    --accent-2: #e7c27d;
+    --accent-soft: rgba(199, 154, 75, 0.12);
+    --line: #e6e9ef;
+    --white: #ffffff;
+    --cream: #f7f8fa;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  html, body { width: 210mm; height: 297mm; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    display: grid;
+    grid-template-columns: 74mm 1fr;
+    background: var(--white);
+  }
+
+  h1, h2, h3, .name, .sec-title, .side-title, .job-title { font-family: 'Sora', sans-serif; }
+
+  /* ---------------- Sidebar ---------------- */
+  .sidebar {
+    background: linear-gradient(180deg, var(--sidebar) 0%, var(--sidebar-2) 100%);
+    color: #e9edf3;
+    padding: 13mm 9mm;
+  }
+
+  .photo-wrap {
+    width: 42mm; height: 42mm;
+    margin: 0 auto 7mm;
+    border-radius: 50%;
+    padding: 1.2mm;
+    background: linear-gradient(135deg, var(--accent-2), var(--accent));
+    box-shadow: 0 4mm 10mm rgba(199,154,75,0.22);
+  }
+  .photo { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; border: 1mm solid var(--sidebar); }
+
+  .name { font-size: 18pt; font-weight: 800; line-height: 1.15; color: #fff; text-align: center; letter-spacing: -0.01em; }
+  .name span { color: var(--accent-2); font-weight: 600; }
+  .tagline { text-align: center; color: #9aa6b8; font-size: 7.5pt; letter-spacing: 0.18em; text-transform: uppercase; margin-top: 2mm; }
+
+  .side-block { margin-top: 8mm; }
+  .side-title {
+    font-size: 8pt; text-transform: uppercase; letter-spacing: 0.16em;
+    color: var(--accent-2); font-weight: 700;
+    padding-bottom: 2mm; margin-bottom: 3.5mm;
+    border-bottom: 0.3mm solid rgba(231,194,125,0.35);
+  }
+
+  .contact { list-style: none; display: flex; flex-direction: column; gap: 2.6mm; }
+  .contact li { display: flex; gap: 2.5mm; align-items: flex-start; font-size: 8.4pt; color: #d6dce6; line-height: 1.4; }
+  .contact .ico { color: var(--accent-2); flex-shrink: 0; font-weight: 700; width: 4mm; }
+  .contact a { color: #d6dce6; text-decoration: none; word-break: break-word; }
+
+  .tags { list-style: none; display: flex; flex-wrap: wrap; gap: 1.8mm; }
+  .tags li {
+    background: rgba(255,255,255,0.06);
+    border: 0.25mm solid rgba(255,255,255,0.14);
+    color: #dbe2ec; font-size: 7.6pt; padding: 1.3mm 2.6mm; border-radius: 1.6mm;
+  }
+
+  .plain { list-style: none; display: flex; flex-direction: column; gap: 2mm; }
+  .plain li { font-size: 8.4pt; color: #d6dce6; padding-left: 4mm; position: relative; }
+  .plain li::before { content: ''; position: absolute; left: 0; top: 1.5mm; width: 1.5mm; height: 1.5mm; border-radius: 50%; background: var(--accent-2); }
+
+  /* ---------------- Main ---------------- */
+  .main { padding: 13mm 12mm; background: var(--white); }
+
+  .block { margin-bottom: 7mm; }
+  .block:last-child { margin-bottom: 0; }
+
+  .sec-title {
+    font-size: 11.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--ink); position: relative; padding-bottom: 2.5mm; margin-bottom: 4mm;
+  }
+  .sec-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 14mm; height: 0.9mm; background: linear-gradient(90deg, var(--accent-2), var(--accent)); border-radius: 1mm; }
+
+  .summary { color: var(--muted); font-size: 9.4pt; line-height: 1.6; }
+  .relocate {
+    display: inline-block; margin-top: 3.5mm; font-size: 8.4pt; color: #8a6a2e;
+    background: var(--accent-soft); border: 0.3mm solid rgba(199,154,75,0.35);
+    padding: 1.6mm 3.5mm; border-radius: 1.8mm;
+  }
+  .relocate strong { color: var(--accent); }
+
+  .job { position: relative; padding-left: 6mm; margin-bottom: 5mm; }
+  .job:last-child { margin-bottom: 0; }
+  .job::before { content: ''; position: absolute; left: 0; top: 1.6mm; width: 2.6mm; height: 2.6mm; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 1.2mm var(--accent-soft); }
+  .job::after { content: ''; position: absolute; left: 1.2mm; top: 5mm; bottom: -5mm; width: 0.25mm; background: var(--line); }
+  .job:last-child::after { display: none; }
+
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 3mm; }
+  .job-title { font-size: 10.5pt; font-weight: 700; color: var(--ink); }
+  .job-date { font-size: 8pt; color: var(--accent); background: var(--accent-soft); padding: 0.8mm 2.6mm; border-radius: 3mm; white-space: nowrap; font-weight: 600; }
+  .job-org { color: var(--accent); font-size: 9pt; font-weight: 600; margin: 0.8mm 0 2.5mm; }
+
+  .bullets { list-style: none; display: flex; flex-direction: column; gap: 1.8mm; }
+  .bullets li { position: relative; padding-left: 5mm; font-size: 9pt; color: var(--muted); line-height: 1.5; }
+  .bullets li::before { content: '▹'; position: absolute; left: 0; color: var(--accent); }
+  .bullets strong { color: var(--ink); font-weight: 600; }
+
+  .foot { margin-top: 6mm; font-size: 7.5pt; color: var(--dim); }
+</style>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="photo-wrap"><img class="photo" src="assets/profile.jpg" alt="Eric Luevano" /></div>
+    <div class="name">Eric <span>(Christian)</span> Luevano</div>
+    <div class="tagline">Entrepreneur · Student</div>
+
+    <div class="side-block">
+      <div class="side-title">Contact</div>
+      <ul class="contact">
+        <li><span class="ico">⌖</span><span>Scottsdale, AZ 85255</span></li>
+        <li><span class="ico">☎</span><span>+1 480 492 9146</span></li>
+        <li><span class="ico">✉</span><a href="mailto:christianluevano522@gmail.com">christianluevano522@gmail.com</a></li>
+      </ul>
+    </div>
+
+    <div class="side-block">
+      <div class="side-title">Skills</div>
+      <ul class="tags">
+        <li>Communication &amp; Teamwork</li>
+        <li>Time Management</li>
+        <li>Customer Service</li>
+        <li>Creativity &amp; Problem-Solving</li>
+        <li>Social Media &amp; Marketing</li>
+        <li>Management</li>
+        <li>Retail &amp; Sales</li>
+        <li>Cash Handling</li>
+        <li>Computer Operation</li>
+      </ul>
+    </div>
+
+    <div class="side-block">
+      <div class="side-title">Languages</div>
+      <ul class="plain"><li>English</li></ul>
+    </div>
+
+    <div class="side-block">
+      <div class="side-title">Certifications</div>
+      <ul class="plain">
+        <li>Driver's License</li>
+        <li>Passenger Endorsement</li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="main">
+    <section class="block">
+      <h2 class="sec-title">Professional Summary</h2>
+      <p class="summary">
+        Motivated and entrepreneurial young professional with hands-on experience founding
+        and running a clothing brand from the age of 14. Known for creativity, reliability,
+        and strong customer service. A dedicated team player shaped by competitive sports,
+        eager to bring discipline, energy, and a self-starter mindset to new opportunities.
+      </p>
+      <span class="relocate"><strong>Open to relocation:</strong> Phoenix, AZ</span>
+    </section>
+
+    <section class="block">
+      <h2 class="sec-title">Experience</h2>
+      <article class="job">
+        <div class="job-head">
+          <span class="job-title">Founder &amp; Clothing Brand Owner</span>
+          <span class="job-date">Jan 2023 – May 2024</span>
+        </div>
+        <div class="job-org">ElevateStreetwear · Scottsdale, AZ</div>
+        <ul class="bullets">
+          <li>Founded an original streetwear brand at age 14, running nearly every part of the business independently.</li>
+          <li>Designed and marketed original clothing pieces from concept to sale.</li>
+          <li>Built and managed social media accounts to grow brand visibility and reach.</li>
+          <li>Handled the full customer experience — orders, payments, and shipping.</li>
+          <li>Developed strong skills in time management, creativity, and customer service.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="block">
+      <h2 class="sec-title">Education</h2>
+      <article class="job">
+        <div class="job-head">
+          <span class="job-title">Homeschool Program</span>
+          <span class="job-date">Expected May 2026</span>
+        </div>
+        <div class="job-org">High School Diploma</div>
+      </article>
+    </section>
+
+    <section class="block">
+      <h2 class="sec-title">Activities &amp; Interests</h2>
+      <ul class="bullets">
+        <li><strong>Football &amp; Baseball</strong> — competitive sports building teamwork, discipline, and leadership.</li>
+        <li><strong>Independent Projects</strong> — building a clothing brand from scratch and exploring entrepreneurship.</li>
+      </ul>
+    </section>
+
+    <div class="foot">References available upon request.</div>
+  </main>
+</body>
+</html>

@@ -6,10 +6,11 @@ deployed via GitHub Pages.
 ## Structure
 
 ```
-index.html                 # the resume page
-styles.css                 # styling
-assets/profile.jpg         # profile photo
-assets/Eric_Luevano_CV.pdf # downloadable CV
+index.html                     # the resume page
+styles.css                     # styling
+resume-print.html              # print-optimized source for the PDF
+assets/profile.jpg             # profile photo
+assets/Eric_Luevano_Resume.pdf # downloadable, designed PDF resume
 ```
 
 ## Run locally
