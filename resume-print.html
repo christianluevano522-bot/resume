@@ -28,7 +28,7 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
-  html, body { width: 210mm; height: 297mm; }
+  html, body { width: 210mm; height: 297mm; overflow: hidden; }
 
   body {
     font-family: 'Inter', sans-serif;
@@ -87,9 +87,9 @@
   .plain li::before { content: ''; position: absolute; left: 0; top: 1.5mm; width: 1.5mm; height: 1.5mm; border-radius: 50%; background: var(--silver); }
 
   /* ---------------- Main ---------------- */
-  .main { padding: 8mm 11mm; background: var(--white); }
+  .main { padding: 5mm 11mm 3mm; background: var(--white); }
 
-  .block { margin-bottom: 3.4mm; }
+  .block { margin-bottom: 3mm; }
   .block:last-child { margin-bottom: 0; }
 
   .sec-title {
@@ -106,7 +106,7 @@
   }
   .relocate strong { color: var(--accent); }
 
-  .job { position: relative; padding-left: 6mm; margin-bottom: 2.8mm; }
+  .job { position: relative; padding-left: 6mm; margin-bottom: 2.3mm; }
   .job:last-child { margin-bottom: 0; }
   .job::before { content: ''; position: absolute; left: 0; top: 1.6mm; width: 2.6mm; height: 2.6mm; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 1.2mm var(--accent-soft); }
   .job::after { content: ''; position: absolute; left: 1.2mm; top: 5mm; bottom: -5mm; width: 0.25mm; background: var(--line); }
@@ -117,12 +117,12 @@
   .job-date { font-size: 8pt; color: var(--accent); background: var(--accent-soft); padding: 0.8mm 2.6mm; border-radius: 3mm; white-space: nowrap; font-weight: 600; }
   .job-org { color: var(--accent); font-size: 9pt; font-weight: 600; margin: 0.6mm 0 2mm; }
 
-  .bullets { list-style: none; display: flex; flex-direction: column; gap: 1mm; }
-  .bullets li { position: relative; padding-left: 5mm; font-size: 8.6pt; color: var(--muted); line-height: 1.38; }
+  .bullets { list-style: none; display: flex; flex-direction: column; gap: 1.1mm; }
+  .bullets li { position: relative; padding-left: 5mm; font-size: 8.6pt; color: var(--muted); line-height: 1.4; }
   .bullets li::before { content: '▹'; position: absolute; left: 0; color: var(--accent); }
   .bullets strong { color: var(--ink); font-weight: 600; }
 
-  .foot { margin-top: 6mm; font-size: 7.5pt; color: var(--dim); }
+  .foot { margin-top: 2mm; font-size: 7.5pt; color: var(--dim); }
 </style>
 </head>
 <body>
@@ -186,18 +186,6 @@
       <h2 class="sec-title">Experience</h2>
       <article class="job">
         <div class="job-head">
-          <span class="job-title">Retail Sales Associate</span>
-          <span class="job-date">Nov 2025 – Present</span>
-        </div>
-        <div class="job-org">PacSun · Scottsdale, AZ</div>
-        <ul class="bullets">
-          <li>Deliver friendly, attentive customer service in a fast-paced retail environment, helping shoppers find products and answering questions.</li>
-          <li>Accurately operate the point-of-sale system to check customers out and process payments and returns.</li>
-          <li>Support a positive store experience by maintaining presentation standards and assisting teammates during busy periods.</li>
-        </ul>
-      </article>
-      <article class="job">
-        <div class="job-head">
           <span class="job-title">Founder &amp; Clothing Brand Owner</span>
           <span class="job-date">Jan 2022 – May 2024</span>
         </div>
@@ -209,6 +197,18 @@
           <li>Managed the full sales cycle end to end — processing orders and payments, tracking inventory, and ensuring reliable, on-time shipping.</li>
           <li>Delivered attentive, personable customer service that built trust and encouraged repeat interest.</li>
           <li>Balanced the business alongside full-time schooling and competitive athletics, demonstrating strong time management, resilience, and initiative.</li>
+        </ul>
+      </article>
+      <article class="job">
+        <div class="job-head">
+          <span class="job-title">Retail Sales Associate</span>
+          <span class="job-date">Nov 2025 – Present</span>
+        </div>
+        <div class="job-org">PacSun · Phoenix, AZ</div>
+        <ul class="bullets">
+          <li>Deliver friendly, attentive customer service in a fast-paced retail environment, helping shoppers find products and answering questions.</li>
+          <li>Accurately operate the point-of-sale system to check customers out and process payments and returns.</li>
+          <li>Support a positive store experience by maintaining presentation standards and assisting teammates during busy periods.</li>
         </ul>
       </article>
     </section>
@@ -237,8 +237,6 @@
         <li><strong>Continuous Learning</strong> — actively building knowledge in business, marketing, and design.</li>
       </ul>
     </section>
-
-    <div class="foot">References available upon request.</div>
   </main>
 </body>
 </html>
