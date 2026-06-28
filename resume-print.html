@@ -10,14 +10,17 @@
   @page { size: A4; margin: 0; }
 
   :root {
-    --ink: #1a1f29;
-    --muted: #515b6b;
+    --ink: #1a2230;
+    --muted: #4d5871;
     --dim: #7a8597;
-    --sidebar: #0e1219;
-    --sidebar-2: #161c27;
-    --accent: #c79a4b;
-    --accent-2: #e7c27d;
-    --accent-soft: rgba(199, 154, 75, 0.12);
+    --sidebar: #0b1322;
+    --sidebar-2: #11203a;
+    /* Navy accent for elements on the white main column */
+    --accent: #2f4a73;
+    --accent-deep: #233a5c;
+    /* Silver accent for elements on the navy sidebar */
+    --silver: #d9dfe9;
+    --accent-soft: rgba(47, 74, 115, 0.10);
     --line: #e6e9ef;
     --white: #ffffff;
     --cream: #f7f8fa;
@@ -50,26 +53,26 @@
     margin: 0 auto 7mm;
     border-radius: 50%;
     padding: 1.2mm;
-    background: linear-gradient(135deg, var(--accent-2), var(--accent));
-    box-shadow: 0 4mm 10mm rgba(199,154,75,0.22);
+    background: linear-gradient(135deg, #eef1f6, #aeb8c6);
+    box-shadow: 0 4mm 10mm rgba(120,140,180,0.22);
   }
   .photo { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; border: 1mm solid var(--sidebar); }
 
   .name { font-size: 18pt; font-weight: 800; line-height: 1.15; color: #fff; text-align: center; letter-spacing: -0.01em; }
-  .name span { color: var(--accent-2); font-weight: 600; }
+  .name span { color: var(--silver); font-weight: 600; }
   .tagline { text-align: center; color: #9aa6b8; font-size: 7.5pt; letter-spacing: 0.18em; text-transform: uppercase; margin-top: 2mm; }
 
   .side-block { margin-top: 8mm; }
   .side-title {
     font-size: 8pt; text-transform: uppercase; letter-spacing: 0.16em;
-    color: var(--accent-2); font-weight: 700;
+    color: var(--silver); font-weight: 700;
     padding-bottom: 2mm; margin-bottom: 3.5mm;
-    border-bottom: 0.3mm solid rgba(231,194,125,0.35);
+    border-bottom: 0.3mm solid rgba(217,223,233,0.35);
   }
 
   .contact { list-style: none; display: flex; flex-direction: column; gap: 2.6mm; }
   .contact li { display: flex; gap: 2.5mm; align-items: flex-start; font-size: 8.4pt; color: #d6dce6; line-height: 1.4; }
-  .contact .ico { color: var(--accent-2); flex-shrink: 0; font-weight: 700; width: 4mm; }
+  .contact .ico { color: var(--silver); flex-shrink: 0; font-weight: 700; width: 4mm; }
   .contact a { color: #d6dce6; text-decoration: none; word-break: break-word; }
 
   .tags { list-style: none; display: flex; flex-wrap: wrap; gap: 1.8mm; }
@@ -81,29 +84,29 @@
 
   .plain { list-style: none; display: flex; flex-direction: column; gap: 2mm; }
   .plain li { font-size: 8.4pt; color: #d6dce6; padding-left: 4mm; position: relative; }
-  .plain li::before { content: ''; position: absolute; left: 0; top: 1.5mm; width: 1.5mm; height: 1.5mm; border-radius: 50%; background: var(--accent-2); }
+  .plain li::before { content: ''; position: absolute; left: 0; top: 1.5mm; width: 1.5mm; height: 1.5mm; border-radius: 50%; background: var(--silver); }
 
   /* ---------------- Main ---------------- */
-  .main { padding: 10mm 11mm; background: var(--white); }
+  .main { padding: 8mm 11mm; background: var(--white); }
 
-  .block { margin-bottom: 4.6mm; }
+  .block { margin-bottom: 3.4mm; }
   .block:last-child { margin-bottom: 0; }
 
   .sec-title {
-    font-size: 11pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
-    color: var(--ink); position: relative; padding-bottom: 2mm; margin-bottom: 3mm;
+    font-size: 10.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--ink); position: relative; padding-bottom: 1.8mm; margin-bottom: 2.4mm;
   }
-  .sec-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 14mm; height: 0.9mm; background: linear-gradient(90deg, var(--accent-2), var(--accent)); border-radius: 1mm; }
+  .sec-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 14mm; height: 0.9mm; background: linear-gradient(90deg, var(--accent), var(--accent-deep)); border-radius: 1mm; }
 
-  .summary { color: var(--muted); font-size: 9.2pt; line-height: 1.5; }
+  .summary { color: var(--muted); font-size: 9pt; line-height: 1.45; }
   .relocate {
-    display: inline-block; margin-top: 2.8mm; font-size: 8.2pt; color: #8a6a2e;
-    background: var(--accent-soft); border: 0.3mm solid rgba(199,154,75,0.35);
+    display: inline-block; margin-top: 2.8mm; font-size: 8.2pt; color: var(--accent-deep);
+    background: var(--accent-soft); border: 0.3mm solid rgba(47, 74, 115, 0.30);
     padding: 1.3mm 3.2mm; border-radius: 1.8mm;
   }
   .relocate strong { color: var(--accent); }
 
-  .job { position: relative; padding-left: 6mm; margin-bottom: 3.8mm; }
+  .job { position: relative; padding-left: 6mm; margin-bottom: 2.8mm; }
   .job:last-child { margin-bottom: 0; }
   .job::before { content: ''; position: absolute; left: 0; top: 1.6mm; width: 2.6mm; height: 2.6mm; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 1.2mm var(--accent-soft); }
   .job::after { content: ''; position: absolute; left: 1.2mm; top: 5mm; bottom: -5mm; width: 0.25mm; background: var(--line); }
@@ -114,8 +117,8 @@
   .job-date { font-size: 8pt; color: var(--accent); background: var(--accent-soft); padding: 0.8mm 2.6mm; border-radius: 3mm; white-space: nowrap; font-weight: 600; }
   .job-org { color: var(--accent); font-size: 9pt; font-weight: 600; margin: 0.6mm 0 2mm; }
 
-  .bullets { list-style: none; display: flex; flex-direction: column; gap: 1.3mm; }
-  .bullets li { position: relative; padding-left: 5mm; font-size: 8.8pt; color: var(--muted); line-height: 1.42; }
+  .bullets { list-style: none; display: flex; flex-direction: column; gap: 1mm; }
+  .bullets li { position: relative; padding-left: 5mm; font-size: 8.6pt; color: var(--muted); line-height: 1.38; }
   .bullets li::before { content: '▹'; position: absolute; left: 0; color: var(--accent); }
   .bullets strong { color: var(--ink); font-weight: 600; }
 
@@ -126,7 +129,7 @@
   <aside class="sidebar">
     <div class="photo-wrap"><img class="photo" src="assets/profile.jpg" alt="Eric Luevano" /></div>
     <div class="name">Eric <span>(Christian)</span> Luevano</div>
-    <div class="tagline">Entrepreneur · Student</div>
+    <div class="tagline">Entrepreneur · Content Creator · Future Owner</div>
 
     <div class="side-block">
       <div class="side-title">Contact</div>
@@ -161,7 +164,6 @@
       <div class="side-title">Certifications</div>
       <ul class="plain">
         <li>Driver's License</li>
-        <li>Passenger Endorsement</li>
       </ul>
     </div>
   </aside>
@@ -170,10 +172,12 @@
     <section class="block">
       <h2 class="sec-title">Professional Summary</h2>
       <p class="summary">
-        Motivated and entrepreneurial young professional with hands-on experience founding
-        and running a clothing brand from the age of 14. Known for creativity, reliability,
-        and strong customer service. A dedicated team player shaped by competitive sports,
-        eager to bring discipline, energy, and a self-starter mindset to new opportunities.
+        Driven and entrepreneurial young professional with hands-on experience founding a
+        clothing brand at 14 and serving customers in fast-paced retail. Passionate about
+        building brands, creating content, and growing an audience, with the long-term goal
+        of becoming a business owner and social media influencer. Known for creativity,
+        reliability, and strong people skills, and eager to bring discipline, energy, and a
+        self-starter mindset to every opportunity.
       </p>
       <span class="relocate"><strong>Open to relocation:</strong> Phoenix, AZ</span>
     </section>
@@ -182,8 +186,20 @@
       <h2 class="sec-title">Experience</h2>
       <article class="job">
         <div class="job-head">
+          <span class="job-title">Retail Sales Associate</span>
+          <span class="job-date">Nov 2025 – Present</span>
+        </div>
+        <div class="job-org">PacSun · Scottsdale, AZ</div>
+        <ul class="bullets">
+          <li>Deliver friendly, attentive customer service in a fast-paced retail environment, helping shoppers find products and answering questions.</li>
+          <li>Accurately operate the point-of-sale system to check customers out and process payments and returns.</li>
+          <li>Support a positive store experience by maintaining presentation standards and assisting teammates during busy periods.</li>
+        </ul>
+      </article>
+      <article class="job">
+        <div class="job-head">
           <span class="job-title">Founder &amp; Clothing Brand Owner</span>
-          <span class="job-date">Jan 2023 – May 2024</span>
+          <span class="job-date">Jan 2022 – May 2024</span>
         </div>
         <div class="job-org">ElevateStreetwear · Scottsdale, AZ</div>
         <ul class="bullets">
@@ -202,7 +218,7 @@
       <article class="job">
         <div class="job-head">
           <span class="job-title">High School Diploma — Homeschool Program</span>
-          <span class="job-date">Expected May 2026</span>
+          <span class="job-date">Expected June 2027</span>
         </div>
         <div class="job-org">Scottsdale, AZ</div>
         <ul class="bullets">
